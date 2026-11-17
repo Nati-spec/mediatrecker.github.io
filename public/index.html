@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MediaTracker — Платформа учета просмотров и рецензирования</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="bg-decor-layer" class="bg-decor-layer" aria-hidden="true"></div>
+  <header class="app-header" id="main-header"></header>
+  <div id="toast" class="toast hidden"></div>
+  <main id="app-view" class="app-main"></main>
+  <footer class="app-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-box-sm">M</span>
+        <span>MediaTracker © 2026 — Информационная система учета медиаконтента (Full-Stack + SQLite/PostgreSQL)</span>
+      </div>
+      <div class="footer-links">
+        <a href="#" onclick="event.preventDefault(); app.navigate('catalog')">Каталог</a>
+        <span>•</span>
+        <a href="#" onclick="event.preventDefault(); app.navigate(store.currentUser && store.currentUser.role === 'admin' ? 'admin' : 'profile')">Личный кабинет</a>
+      </div>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
